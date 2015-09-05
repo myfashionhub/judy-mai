@@ -1,20 +1,4 @@
 /* HOME PAGE */
-.wrapper {
-  background-image: url('../images/home-background.jpg');
-  background-size: cover;
-}
-
-h1 {
-  margin: 7% 0 0 0;
-  font-size: 2.5em;
-}
-
-.content .textbox {
-  width: 750px;
-  margin: 10% auto 10px 0;
-  padding: 15px 25px;
-  background-color: rgba(255,255,255,.7);
-}
 
 .latest {
   list-style: none;
