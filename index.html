@@ -5,16 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Judy Mai's Music</title>
-  
-  <link href='//fonts.googleapis.com/css?family=Petit+Formal+Script|Lato' rel='stylesheet' type='text/css'>
+
+  <!-- Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>  
+  <link href='//fonts.googleapis.com/css?family=Petit+Formal+Script|Raleway:400,700|PT+Sans:400,700' rel='stylesheet' type='text/css'>
   <link rel="icon" type="image/png" href="images/favicon.png" />
 
   <link rel="stylesheet" type="text/css" media="all" href="stylesheet/base.css" />
   <link rel="stylesheet" type="text/css" media="all" href="stylesheet/layout.css" />
   <link rel="stylesheet" type="text/css" media="all" href="stylesheet/pages.css" />
   <link rel="stylesheet" type="text/css" media="all" href="stylesheet/mobile.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
   <script type="text/javascript" src='javascript/nav.js'></script>
+  <script type="text/javascript" src='javascript/music.js'></script>
   <script type="text/javascript" src='javascript/script.js'></script>
 </head>
 
@@ -27,46 +32,51 @@
   </a>
   <ul>
     <li data-name='about'>
-      <a href="pages/about.html">Mai self</a>
+      <a href="/about" class='page about'>About me</a>
     </li>
-    <li data-name='contact'>
-      <a href="pages/contact.html">Booking</a>
-    </li>
+
     <li data-name='news'>
-      <a href="pages/news.html">News</a>
+      <a href="/news" class='page news'>News</a>
     </li>      
-    <li data-name='media'>
-      Media
-      <!--ul>
-        <li data-name='music'>
-          <a href="pages/music.html">Music</a>
-        </li>
-        <li data-name='pictures'>
-          <a href="pages/pictures.html">Pictures</a>
-        </li>
-      </ul-->
+
+    <li data-name='music'>
+      <a href="/music" class='page music'>Music</a>
     </li>
+
+    <li data-name='contact'>
+      <a href="/contact" class='page contact'>Contact</a>
+    </li>    
   </ul>
 </nav>
 
 
 <!-- WRAPPER -->
 <div class="wrapper home">
+  <header>
+    <h1>Welcome to Mai World</h1>
+
+    <div class="player" title="All night long">
+      <audio controls="" autobuffer="true" preload="auto">
+        <source src="http://www.judymai.com/wp-content/uploads/2013/01/All-night-long-mp32.mp3" type="audio/mpeg">
+        <source src="http://www.judymai.com/wp-content/uploads/2013/01/All-night-long-mp32.ogg" type="audio/ogg">    
+      </audio>
+    </div>
+  </header>
+
   <div class="content">
     <h1>Welcome to Mai World</h1>  
 
     <div class="textbox">
       <p>Judy Mai was born in Hai Phong, Vietnam and raised in Germany. Mai’s studies began 11 years ago.</p>  
 
-      <p>
-        At age 12, she commenced singing lessons in Frankfurt, Germany where she studied both classical and pop music. When Judy Mai was in 7th grade, she was a soloist at a Gospel Choir at school, which laid the foundation of her passion for Soul and R’n’B music.
+       <a href="/about" class="page about">Read more...</a>
       </p>      
 
       <p>
-        She gained a lot of live experience through performing as a solo singer and touring with her dance group and Gospel Choir nationally.
+        <a href="/music">Discover Judy's music</a>
+        <br/>
+        <a href="/contact">Book her for your event</a>
       </p>
-
-      <hr/>
 
       <ul class='latest'>
         <h2>Latest news</h2>
