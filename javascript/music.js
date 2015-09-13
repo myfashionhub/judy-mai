@@ -32,7 +32,6 @@ var Media = function() {
       for (key in snap.val()) {
         var item = snap.val()[key];
         that.populateCollection(item, container, callbackName);
-        console.log(container.innerHTML)
       }
     });
   };

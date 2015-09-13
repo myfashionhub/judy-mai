@@ -12,26 +12,30 @@ var Navigation = function() {
   };
 
   this.changePage = function(pageName) {
-    var fileName = 'pages/'+pageName+'.html';
+    var fileName = '/pages/'+pageName+'.html';
 
     $(".wrapper").load(fileName);
-    window.history.pushState({
-      "html": fileName
-    }, "" , pageName);
+    window.history.pushState(
+      { "html": fileName }, "" , '/'+pageName+'/'
+    );
 
-    if (pageName === 'music') {
-      var media = new Media();
+    if (pageName === 'music') { 
+      var media = new Media(); 
     }
   };
 
   this.detectPage = function() {
-    console.log('detect page')
-    var pathName = window.location.pathname;
+    var pathName = window.location.pathname,
+        fileName = '/pages/'+pathName.replace(/\//g,'')+'.html';
 
     if (pathName !== '/') {
-      window.location = '/';
-      this.changePage(pathName.replace('/',''));
+      $(".wrapper").load(fileName, function() {
+        if (pathName.indexOf('music') > -1) { 
+          var media = new Media(); 
+        }
+      });
     }
+
   };
 
   this.isMobile = function() {
