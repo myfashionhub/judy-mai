@@ -2,7 +2,8 @@ var Navigation = function() {
   var that = this;
 
   this.init = function() {
-    this.detectPage();
+    var pageName = window.location.hash.replace('#','');
+    this.changePage(pageName);
 
     $('a.page').click(function(e) {
       e.preventDefault();
@@ -13,29 +14,13 @@ var Navigation = function() {
 
   this.changePage = function(pageName) {
     var fileName = '/pages/'+pageName+'.html';
+    window.location.hash = pageName;
 
-    $(".wrapper").load(fileName);
-    window.history.pushState(
-      { "html": fileName }, "" , '/'+pageName+'/'
-    );
-
-    if (pageName === 'music') { 
-      var media = new Media(); 
-    }
-  };
-
-  this.detectPage = function() {
-    var pathName = window.location.pathname,
-        fileName = '/pages/'+pathName.replace(/\//g,'')+'.html';
-
-    if (pathName !== '/') {
-      $(".wrapper").load(fileName, function() {
-        if (pathName.indexOf('music') > -1) { 
-          var media = new Media(); 
-        }
-      });
-    }
-
+    $("#page-load").load(fileName, function() {
+      if (pageName.indexOf('music') > -1) { 
+        var media = new Media(); 
+      }
+    });
   };
 
   this.isMobile = function() {

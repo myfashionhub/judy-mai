@@ -10,7 +10,7 @@
   <!-- Libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>  
-  <link href='//fonts.googleapis.com/css?family=Petit+Formal+Script|Raleway:400,700|PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Petit+Formal+Script|Raleway:400,500,700|PT+Sans:400,700' rel='stylesheet' type='text/css'>
   
   <!-- Assets -->
   <link rel="stylesheet" type="text/css" media="all" href="/stylesheet/base.css" />
@@ -36,19 +36,19 @@
   </a>
   <ul>
     <li data-name='about'>
-      <a href="/about" class='page about'>About me</a>
+      <a href="#about" class='page about'>About me</a>
     </li>
 
     <li data-name='news'>
-      <a href="/news" class='page news'>News</a>
+      <a href="#news" class='page news'>News</a>
     </li>      
 
     <li data-name='music'>
-      <a href="/music" class='page music'>Music</a>
+      <a href="#music" class='page music'>Music</a>
     </li>
 
     <li data-name='contact'>
-      <a href="/contact" class='page contact'>Contact</a>
+      <a href="#contact" class='page contact'>Contact</a>
     </li>    
   </ul>
 </nav>
@@ -56,6 +56,7 @@
 <!-- WRAPPER -->
 <div class="wrapper home">
   
+  <div id="page-load">
   <header>
     <h1>Welcome to Mai World</h1>
   </header>
@@ -68,13 +69,13 @@
         I draw inspiration from female artists with powerful voices, including Whitney Houston, Mariah Carey, Celine Dion, Christina Aguilera and Beyonce.
       </p>  
 
-       <a href="/about" class="page about">Read more...</a>
+       <a href="#about" class="page about">Read more...</a>
       </p>      
 
       <p>
-        <a href="/music">Discover my music</a>
+        <a href="#music">Discover my music</a>
         <br/>
-        <a href="/contact">Book me for your event</a>
+        <a href="#contact">Book me for your event</a>
       </p>
 
       <ul class='latest'>
@@ -96,21 +97,21 @@
       </ul>
     </div>
   </div> <!-- end content -->
+  </div> <!-- end swap content -->
 
   <footer>
     Copyright Judy Mai 2012-2015
   </footer>
 
-    <div class="player" title="All night long">
-      <audio autobuffer="true" preload="auto">
-        <source src="http://www.judymai.com/wp-content/uploads/2013/01/All-night-long-mp32.mp3" type="audio/mpeg">
-        <source src="http://www.judymai.com/wp-content/uploads/2013/01/All-night-long-mp32.ogg" type="audio/ogg">    
-      </audio>
-    </div>
+  <div class="player" title="All night long">
+    <audio autobuffer="true" preload="auto">
+      <source src="http://www.judymai.com/wp-content/uploads/2013/01/All-night-long-mp32.mp3" type="audio/mpeg">
+      <source src="http://www.judymai.com/wp-content/uploads/2013/01/All-night-long-mp32.ogg" type="audio/ogg">    
+    </audio>
+  </div>
 
 </div> <!-- end wrapper -->
 
-<div id="page-load"></div>
 
 </body>
 </html>
