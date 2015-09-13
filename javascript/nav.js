@@ -19,15 +19,18 @@ var Navigation = function() {
       "html": fileName
     }, "" , pageName);
 
+    if (pageName === 'music') {
+      var media = new Media();
+    }
   };
 
   this.detectPage = function() {
     console.log('detect page')
-    var pageName = window.location.pathname;
+    var pathName = window.location.pathname;
 
-    if (pageName !== '/') {
+    if (pathName !== '/') {
       window.location = '/';
-      this.changePage(pageName);
+      this.changePage(pathName.replace('/',''));
     }
   };
 
