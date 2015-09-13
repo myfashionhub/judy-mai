@@ -13,13 +13,10 @@ var Navigation = function() {
 
   this.changePage = function(pageName) {
     var fileName = 'pages/'+pageName+'.html';
-    console.log('change page')
 
     $(".wrapper").load(fileName);
-    document.title = pageName;
     window.history.pushState({
-      "html": fileName,
-      "pageTitle": pageName
+      "html": fileName
     }, "" , pageName);
 
   };
@@ -32,7 +29,26 @@ var Navigation = function() {
       window.location = '/';
       this.changePage(pageName);
     }
-  }
+  };
+
+  this.isMobile = function() {
+    var userAgent = false, resolution = false;
+    if ( navigator.userAgent.match(/Android/i) || 
+        navigator.userAgent.match(/webOS/i) || 
+        navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/iPad/i) ||
+        navigator.userAgent.match(/iPod/i) ||
+        navigator.userAgent.match(/BlackBerry/i) ||
+        navigator.userAgent.match(/Windows Phone/i) ) {
+      userAgent = true;
+    }
+
+    if (window.innerWidth <= 700 && window.innerHeight <= 500) {
+      resolution = true;
+    }
+    
+    return userAgent || resolution;
+  };
 
   this.init();
 
