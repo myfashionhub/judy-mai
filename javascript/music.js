@@ -16,7 +16,7 @@ var Media = function() {
     var itemLi = $('<li>').html(item.name).attr('data-id',item.id).
                  addClass('track');
     list.append(itemLi);
-    console.log(list) 
+ 
     itemLi.click(function(e) {      
       that[callbackName](item.id);
     });
