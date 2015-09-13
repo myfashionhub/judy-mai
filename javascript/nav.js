@@ -1,18 +1,38 @@
 var Navigation = function() {
   var that = this;
 
-  this.init = function() {  
+  this.init = function() {
+    this.detectPage();
+
     $('a.page').click(function(e) {
-      console.log('click page')
       e.preventDefault();
-      that.changePage(e);
+      var pageName = $(e.target).attr('class').replace('page ','');
+      that.changePage(pageName);
     });
   };
 
-  this.changePage = function(e) {
-    
-    console.log($(e.target).attr('class'))
+  this.changePage = function(pageName) {
+    var fileName = 'pages/'+pageName+'.html';
+    console.log('change page')
+
+    $(".wrapper").load(fileName);
+    document.title = pageName;
+    window.history.pushState({
+      "html": fileName,
+      "pageTitle": pageName
+    }, "" , pageName);
+
   };
+
+  this.detectPage = function() {
+    console.log('detect page')
+    var pageName = window.location.pathname;
+
+    if (pageName !== '/') {
+      window.location = '/';
+      this.changePage(pageName);
+    }
+  }
 
   this.init();
 
