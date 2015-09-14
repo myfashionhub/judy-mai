@@ -32,3 +32,10 @@ div {
 }
 
 /* dark orchid #9A32CD */
+
+/* Styling elements */
+.divider {
+  width: 100%;
+  height: 0;
+  clear: both;
+}

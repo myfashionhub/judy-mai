@@ -31,7 +31,40 @@ li.track:hover {
   text-decoration: underline;
 }
 
+.soundcloud {
+  float: left;
+}
+
 .track-list {
   list-style: none;
+  float: left;
+}
 
+.track-list::after {
+  clear: both;
+}
+
+.youtube {
+  margin: 3em auto 1em auto;
+  display: block;
+}
+
+.video-list {
+  width: 15em;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* ABOUT PAGE */
+.content.about img {
+  width: 300px;
+  height: auto;
+  float: right;
+  margin: 0 0 5px 15px;
+}
+
+/* BLOG PAGE */
+.post-list {
+  list-style: none;
 }

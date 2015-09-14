@@ -95,3 +95,7 @@ header h1 {
 .content a:hover {
   text-decoration: underline;
 }
+
+.content h1 {
+  font-size: 3em;
+}
