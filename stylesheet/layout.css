@@ -38,6 +38,7 @@ nav .logo:hover {
 
 footer {
   margin: 20px 0;
+  color: #fff;
   text-align: center;
 }
 
@@ -45,7 +46,7 @@ footer {
 /* LAYOUT */
 .wrapper {
   width: 100%;
-  margin-top: 20%;
+  margin-top: 22%;
   overflow-x: hidden;
   overflow-y: auto;
   font-size: 16px;
@@ -75,10 +76,13 @@ header {
 header h1 {
   font-family: 'Petit Formal Script';
   font-size: 3.5em;
+}
+
+header h1.center {
   color: #fff;
   text-align: center;
-  text-shadow: 1px 1px #0F121A;
-}
+  text-shadow: 1px 1px #0F121A;  
+} 
 
 /* Content */
 .content {
