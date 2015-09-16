@@ -23,14 +23,17 @@ a { color: #fff; }
 
 nav a:hover, nav a.current {
   color: #9A32CD;
-  text-shadow: 1px 1px 3px #fff;
 }
 
 nav .logo {
   margin: 10px 0 0 1em;
   display: inline-block;
-  font-family: 'PT Sans'; /* 'Petit Formal Script' */
+  font-family: 'Petit Formal Script';
   font-size: 2em;
+}
+
+nav .logo:hover {
+  color: #fff;
 }
 
 footer {
@@ -56,9 +59,10 @@ footer {
   position: fixed;
   top: 0;
   z-index: -1;
-  background-image: url('../images/home-background.jpg');
-  background-size: 100%;
-  background-position: top right;  
+  background-image: url('../images/photoshoot/judymai-ombre1.jpg');
+  background-color: #0F121A;
+  background-position: top center;
+  background-repeat: no-repeat;  
 }
 
 /* Header */
@@ -69,9 +73,11 @@ header {
 }
 
 header h1 {
-  font-family: 'Raleway';
-  font-size: 4em;
-  text-shadow: 1px 1px 1px #fff;
+  font-family: 'Petit Formal Script';
+  font-size: 3.5em;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px #0F121A;
 }
 
 /* Content */
@@ -85,7 +91,7 @@ header h1 {
   width: 100%;
   min-width: 700px;
   padding: 15px 25px;
-  background-color: rgba(255,255,255,.7);
+  background-color: rgba(255,255,255,.85);
 }
 
 .content a {

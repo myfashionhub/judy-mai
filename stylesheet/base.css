@@ -10,9 +10,15 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3 {
+h1, h2 {
   color: #9A32CD; 
+  font-family: 'Petit Formal Script';
+}
+
+h3 {
+  color: #9A32CD;
   font-family: 'PT Sans';
+  font-size: 1.8em;
 }
 
 p, span {
