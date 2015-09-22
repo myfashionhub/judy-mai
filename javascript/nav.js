@@ -61,8 +61,9 @@ var Effects = function() {
     page.find('.content').css('margin-top', '60vh').hide();
     page.find('footer').hide();
 
+    var margin = ($(document).width() - page.find('header').width()) / 2;
     page.find('header').animate({
-      'margin-left': '15%'
+      'margin-left': margin
     }, 1000);
 
     setTimeout(function() {

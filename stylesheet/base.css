@@ -15,9 +15,11 @@ h1, h2 {
   font-family: 'FatCow'; /* 'Petit Formal Script' */
 }
 
+h2 { font-size: 3em; }
+
 h3 {
   color: #9A32CD;
-  font-family: 'FatCow'; /* 'PT Sans' */
+  font-family: 'PT Sans';
   font-size: 1.8em;
 }
 
