@@ -12,12 +12,12 @@ a {
 
 h1, h2 {
   color: #9A32CD; 
-  font-family: 'Petit Formal Script';
+  font-family: 'FatCow'; /* 'Petit Formal Script' */
 }
 
 h3 {
   color: #9A32CD;
-  font-family: 'PT Sans';
+  font-family: 'FatCow'; /* 'PT Sans' */
   font-size: 1.8em;
 }
 
@@ -44,4 +44,10 @@ div {
   width: 100%;
   height: 0;
   clear: both;
+}
+
+@font-face {
+  font-family: 'FatCow';
+  src: url('/stylesheet/fonts/fatcow.ttf') format('truetype'),
+       url('/stylesheet/fonts/fatcow-italic.ttf') format('truetype');
 }

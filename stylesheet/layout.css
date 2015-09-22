@@ -69,25 +69,31 @@ footer {
 /* Header */
 header {
   width: 70%;
+  min-width: 700px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 header h1 {
-  font-family: 'Petit Formal Script';
-  font-size: 3.5em;
+  font-family: 'FatCow'; /* 'Petit Formal Script' */
+  font-size: 5em;
+  margin: 0 auto .2em auto;
 }
 
 header h1.center {
   color: #fff;
+  font-size: 7em;
   text-align: center;
   text-shadow: 1px 1px #0F121A;  
 } 
 
-/* Content */
-.content {
+header, .content {
   width: 70%;
   min-width: 700px;
+}
+
+/* Content */
+.content {
   margin: 0 auto;
 }
 
