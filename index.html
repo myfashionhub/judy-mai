@@ -1,87 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
   <title>Judy Mai's Music</title>
-  
-  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700|PT+Sans:400,700|' rel='stylesheet' type='text/css'>
-  <link rel="icon" type="image/png" href="images/favicon.png" />
 
-  <link rel="stylesheet" type="text/css" media="all" href="stylesheet/base.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="stylesheet/layout.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="stylesheet/pages.css" />
-  <link rel="stylesheet" type="text/css" media="all" href="stylesheet/mobile.css" />
+  <!-- Libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script type="text/javascript" src='javascript/nav.js'></script>
-  <script type="text/javascript" src='javascript/script.js'></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>  
+  <link href='//fonts.googleapis.com/css?family=Petit+Formal+Script|Raleway:400,500,700|PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  
+  <!-- Assets -->
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheet/base.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheet/layout.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheet/pages.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="/stylesheet/mobile.css" />
+
+  <!-- Script -->
+  <script type="text/javascript" src='/javascript/nav.js'></script>
+  <script type="text/javascript" src='/javascript/music.js'></script>
+  <script type="text/javascript" src='/javascript/script.js'></script>
 </head>
 
 <!-- https://www.newmusicusa.org/ -->
 <body>
+
+<div class="background"></div>
+
  <!-- NAV BAR -->
 <nav>
   <a href="/">
-    <img src="images/logo.png" />
+    <h1 class='logo'>Judy Mai</h1>
   </a>
   <ul>
     <li data-name='about'>
-      <a href="" class='page about'>Mai self</a>
+      <a href="#about" class='page about'>About me</a>
     </li>
-    <li data-name='news'>
-      <a href="" class='page news'>News</a>
+
+    <li data-name='blog'>
+      <a href="#blog" class='page blog'>Blog</a>
     </li>      
+
     <li data-name='music'>
-      <a href="" class='page music'>Music</a>
+      <a href="#music" class='page music'>Music</a>
     </li>
+
     <li data-name='contact'>
-      <a href="" class='page contact'>Press</a>
-    </li>
+      <a href="#contact" class='page contact'>Contact</a>
+    </li>    
   </ul>
 </nav>
 
 <!-- WRAPPER -->
 <div class="wrapper home">
+  
+  <div id="page-load">
   <header>
-    <h1>Welcome to Mai World</h1>
-
-    <div class="player" title="All night long">
-      <audio controls="" autobuffer="true" preload="auto">
-        <source src="http://www.judymai.com/wp-content/uploads/2013/01/All-night-long-mp32.mp3" type="audio/mpeg">
-        <source src="http://www.judymai.com/wp-content/uploads/2013/01/All-night-long-mp32.ogg" type="audio/ogg">    
-      </audio>
-    </div>
+    <h1 class="center">Welcome to Mai World</h1>
   </header>
 
-  <div class="content">
+  <div class="content home">
     <div class="textbox">
+      <p><big>Halo, my name is Judy Mai.</big></p>
       <p>
-        Judy Mai is a Vietnamese-born singer/songwriter who 
-        grew up in Frankfurt, Germany. Her musical style is 
-        R&B, Pop and influenced Beyonce. 
-        Judy speaks 5 languages, including German, English, 
-        French, Vietnamese and currently lives in Berlin.
-        <a href="" class="page about">Read more...</a>
-      </p>
+        I am a Vietnamese German singer/songwriter currently based in Berlin. My musical style is a mix of R'n'B, Soul and Pop. 
+        I draw inspiration from female artists with powerful voices, including Whitney Houston, Mariah Carey, Celine Dion, Christina Aguilera and Beyonce.
+      </p>  
+
+       <a href="#about" class="page about">Read more...</a>
+      </p>      
 
       <p>
-        <a href="/music">Discover Judy's music</a>
+        <a href="#music" class="page music">Discover my music</a>
         <br/>
-        <a href="/contact">Book her for your event</a>
+        <a href="#contact" class="page contact">Book me for your event</a>
       </p>
 
       <ul class='latest'>
-        <h2>Latest news</h2>
+        <h2>Updates</h2>
         <li>
-          <img src="images/photoshoot/judymai-trenchcoat.jpg">
+          <img src="/images/photoshoot/judymai-trenchcoat.jpg">
           <div class='text'>
             <h4>New Photoshoot</h4>
             <p class="date"></p>
           </div>
         </li>
         <li>
-          <img src="images/photoshoot/judymai-sing1.jpg">
+          <img src="/images/photoshoot/judymai-sing1.jpg">
           <div class='text'>
             <h4>Cover</h4>
             <p class="date"></p>            
@@ -90,14 +97,21 @@
       </ul>
     </div>
   </div> <!-- end content -->
+  </div> <!-- end swap content -->
 
   <footer>
     Copyright Judy Mai 2012-2015
   </footer>
 
+  <div class="player" title="All night long">
+    <audio autobuffer="true" preload="auto">
+      <source src="http://www.judymai.com/wp-content/uploads/2013/01/All-night-long-mp32.mp3" type="audio/mpeg">
+      <source src="http://www.judymai.com/wp-content/uploads/2013/01/All-night-long-mp32.ogg" type="audio/ogg">    
+    </audio>
+  </div>
+
 </div> <!-- end wrapper -->
 
-<div class="hidden"></div>
 
 </body>
 </html>

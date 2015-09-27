@@ -10,15 +10,24 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3 {
-  color: #9743d9;
+h1, h2 {
+  color: #9A32CD; 
+  font-family: 'FatCow'; /* 'Petit Formal Script' */
+}
+
+h2 { font-size: 3em; }
+
+h3 {
+  color: #9A32CD;
   font-family: 'PT Sans';
-  font-weight: bold;
+  font-size: 1.8em;
 }
 
 p, span {
   font-family: 'Raleway', 'Helvetica', Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 500;
 } 
 
 div {
@@ -30,4 +39,17 @@ div {
   display: none;
 }
 
-/* purple #9743d9 */
+/* dark orchid #9A32CD */
+
+/* Styling elements */
+.divider {
+  width: 100%;
+  height: 0;
+  clear: both;
+}
+
+@font-face {
+  font-family: 'FatCow';
+  src: url('/stylesheet/fonts/fatcow.ttf') format('truetype'),
+       url('/stylesheet/fonts/fatcow-italic.ttf') format('truetype');
+}

@@ -9,28 +9,29 @@ var Media = function() {
   this.init = function() {
     this.getCollection('tracks', $('.track-list'), 'embedSoundcloud');
     this.getCollection('videos', $('.video-list'), 'embedYoutube');
+    console.log('media init')
   };
 
-  this.populateCollection = function(item, list, callbackName) {
+  this.populateCollection = function(item, container, callbackName) {
     var that = this;
     var itemLi = $('<li>').html(item.name).attr('data-id',item.id).
                  addClass('track');
-    list.append(itemLi);
-    console.log(list) 
+    container.append(itemLi);
+
     itemLi.click(function(e) {      
       that[callbackName](item.id);
     });
   };
 
-  this.getCollection = function(name, list, callbackName) {
+  this.getCollection = function(name, container, callbackName) {
     var that = this;
     var collection = new Firebase('https://judy-mai.firebaseio.com/'+name);
-    list.empty();
+    container.empty();
 
     collection.on('value', function(snap) {
       for (key in snap.val()) {
         var item = snap.val()[key];
-        that.populateCollection(item, list, callbackName);
+        that.populateCollection(item, container, callbackName);
       }
     });
   };
@@ -52,4 +53,10 @@ var Media = function() {
   this.init();
 };
 
-var media = new Media();
+var Player = function() {
+  this.init = function() {
+
+  };
+
+  this.init();
+};
