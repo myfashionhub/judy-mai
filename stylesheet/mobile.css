@@ -9,11 +9,14 @@ nav .expand { /* hamburger button */
 }
 
 nav ul {
-  /*display: none;*/
+  float: none;
+  margin-right: 0;
 }
 
 nav ul li {
   display: none;
+  margin-right: 0;
+  text-align: right;
 }
 
 nav ul.expanded li {
