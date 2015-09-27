@@ -11,10 +11,10 @@ nav {
 nav ul {
   list-style: none;
   float: right;
-  margin: 15px 30px 0 0;
-  font-family: 'PT Sans';
+  margin: 5px 30px 0 0;
+  font-family: 'BenchNine', 'FatCow', sans-serif;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 25px;
   text-transform: uppercase;
 }
 
@@ -34,9 +34,9 @@ nav a:hover, nav a.current {
 }
 
 nav .logo {
-  margin: 10px 0 0 1em;
+  margin: 5px 0 0 1em;
   display: inline-block;
-  font-family: 'PT Sans'; /*'Petit Formal Script'*/
+  font-family: 'Raleway';
   font-size: 2em;
 }
 
@@ -54,7 +54,6 @@ footer {
 /* LAYOUT */
 .wrapper {
   width: 100%;
-  margin-top: 22%;
   overflow-x: hidden;
   overflow-y: auto;
   font-size: 16px;
@@ -78,25 +77,25 @@ footer {
 header {
   width: 70%;
   min-width: 700px;
-  margin: 0 auto;
+  margin: 30% auto 0 auto;
   overflow: hidden;
-  background-image: url('../images/home-background.jpg');
   background-position: top right;
   background-size: 100% auto;
 }
 
 header h1 {
   margin: 0 auto .2em auto;
-  font-family:  'BenchNine', sans-serif; /*'FatCow',*/
+  font-family:  'BenchNine', 'FatCow', sans-serif;
   font-size: 5em;
   font-weight: bold;
+  line-height: .8em;  
 }
 
 header h1.center {
   color: #fff;
   font-size: 7em;
   text-align: center;
-  text-shadow: 1px 1px #0F121A;  
+  text-shadow: 1px 1px #0F121A;
 } 
 
 header, .content {
@@ -113,6 +112,7 @@ header, .content {
   width: 100%;
   min-width: 700px;
   padding: 15px 25px;
+  overflow: hidden;  
   background-color: rgba(255,255,255,.85);
 }
 

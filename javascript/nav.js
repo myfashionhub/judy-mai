@@ -57,13 +57,12 @@ var Effects = function() {
   this.homepage = function() {
     var page = $('.wrapper.home');
 
-    page.find('header').css('margin-left', '3000px');
+    page.find('header').css('margin-top', '-1000px');
     page.find('.content').css('margin-top', '60vh').hide();
     page.find('footer').hide();
 
-    var margin = ($(document).width() - page.find('header').width()) / 2;
     page.find('header').animate({
-      'margin-left': margin
+      'margin-top': '22%'
     }, 1000);
 
     setTimeout(function() {
