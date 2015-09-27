@@ -1,6 +1,34 @@
 @media screen and (max-width: 600px) {
 
-  .content {
-    width: 100%;
-  }
+nav .expand { /* hamburger button */
+  display: block;
+  width: 40px;
+  height: auto;
+  position: relative;
+  float: right;
+}
+
+nav ul {
+  /*display: none;*/
+}
+
+nav ul li {
+  display: none;
+}
+
+nav ul.expanded li {
+  display: block;
+}
+
+nav .logo {
+  margin-left: 0;
+}
+
+.content {
+  width: 100%;
+}
+
+
+
+
 }

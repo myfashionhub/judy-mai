@@ -44,6 +44,10 @@ nav .logo:hover {
   color: #fff;
 }
 
+nav .expand {
+  display: none;
+}
+
 footer {
   margin: 20px 0;
   color: #fff;

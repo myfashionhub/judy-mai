@@ -34,7 +34,7 @@ p, span {
   font-weight: 500;
 } 
 
-div {
+div, nav, ul, li, p, span {
   box-sizing: border-box;
 }
 
