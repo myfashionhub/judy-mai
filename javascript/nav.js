@@ -25,24 +25,6 @@ var Navigation = function() {
     });
   };
 
-  this.isMobile = function() {
-    var userAgent = false, resolution = false;
-    if ( navigator.userAgent.match(/Android/i) || 
-        navigator.userAgent.match(/webOS/i) || 
-        navigator.userAgent.match(/iPhone/i) ||
-        navigator.userAgent.match(/iPad/i) ||
-        navigator.userAgent.match(/iPod/i) ||
-        navigator.userAgent.match(/BlackBerry/i) ||
-        navigator.userAgent.match(/Windows Phone/i) ) {
-      userAgent = true;
-    }
-
-    if (window.innerWidth <= 700 && window.innerHeight <= 800) {
-      resolution = true;
-    }
-
-    return userAgent || resolution;
-  };
 
   this.expandMenu = function() {
     $('nav .expand').click(function() {
@@ -50,7 +32,7 @@ var Navigation = function() {
     });
 
     $('nav li').click(function() {
-      if (that.isMobile()) {
+      if (isMobile()) {
         $('nav ul').removeClass('expanded');
       }
     });
@@ -64,7 +46,7 @@ var Navigation = function() {
 var Effects = function() {
   var that = this;
 
-  this.init = function() {  
+  this.init = function() { 
     this.homepage();
   };
 
@@ -72,12 +54,12 @@ var Effects = function() {
     var page = $('.wrapper.home');
 
     page.find('header').css('margin-top', '-1000px');
-    page.find('.content').css('margin-top', '60vh').hide();
-    page.find('footer').hide();
-
     page.find('header').animate({
       'margin-top': '22%'
     }, 1000);
+
+    page.find('footer').hide();
+    page.find('.content').css('margin-top', '60vh').hide();
 
     setTimeout(function() {
       page.find('.content').show().animate({
@@ -89,3 +71,22 @@ var Effects = function() {
 
   this.init();  
 };
+
+function isMobile() {
+  var userAgent = false, resolution = false;
+  if ( navigator.userAgent.match(/Android/i) || 
+      navigator.userAgent.match(/webOS/i) || 
+      navigator.userAgent.match(/iPhone/i) ||
+      navigator.userAgent.match(/iPad/i) ||
+      navigator.userAgent.match(/iPod/i) ||
+      navigator.userAgent.match(/BlackBerry/i) ||
+      navigator.userAgent.match(/Windows Phone/i) ) {
+    userAgent = true;
+  }
+
+  if (window.innerWidth <= 700 && window.innerHeight <= 800) {
+    resolution = true;
+  }
+  
+  return userAgent || resolution;
+}
