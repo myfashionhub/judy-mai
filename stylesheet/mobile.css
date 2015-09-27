@@ -27,11 +27,14 @@ nav .logo {
   margin-left: 0;
 }
 
-.content {
+.content, .content .textbox, header {
   width: 100%;
+  min-width: 100%; /* Overwriting normal width */
 }
 
-
-
+header h1.center {
+  font-size: 3em;
+  margin-top: 40%;
+}
 
 }
