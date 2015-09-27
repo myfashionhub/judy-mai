@@ -10,6 +10,8 @@ var Navigation = function() {
       var pageName = $(e.target).attr('class').replace('page ','');
       that.changePage(pageName);
     });
+
+    this.expandMenu();
   };
 
   this.changePage = function(pageName) {
@@ -35,11 +37,23 @@ var Navigation = function() {
       userAgent = true;
     }
 
-    if (window.innerWidth <= 700 && window.innerHeight <= 500) {
+    if (window.innerWidth <= 700 && window.innerHeight <= 800) {
       resolution = true;
     }
-    
+
     return userAgent || resolution;
+  };
+
+  this.expandMenu = function() {
+    $('nav .expand').click(function() {
+      $('nav ul').toggleClass('expanded');
+    });
+
+    $('nav li').click(function() {
+      if (that.isMobile()) {
+        $('nav ul').removeClass('expanded');
+      }
+    });
   };
 
   this.init();
