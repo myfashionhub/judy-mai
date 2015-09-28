@@ -37,15 +37,16 @@ nav .logo {
 }
 
 header {
-  margin-top: 70%;
-}
-
-header h1.center {
-  font-size: 3em;
+  margin-top: 100%;
 }
 
 header h1 {
   margin-left: 10px;
+}
+
+header h1.center {
+  font-size: 3em;
+  margin-left: 0;
 }
 
 footer {

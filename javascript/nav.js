@@ -53,7 +53,7 @@ var Effects = function() {
   this.homepage = function() {
     var page = $('.wrapper.home');
     var marginTop = '22%';
-    if (isMobile()) { marginTop = '70%'; }
+    if (isMobile()) { marginTop = '100%'; }
 
     page.find('header').css('margin-top', '-1000px');
     page.find('header').animate({
